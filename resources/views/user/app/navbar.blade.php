@@ -25,6 +25,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('aboutUs') }}">About Us</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('createSms')}}">Contact Us</a>
+                    </li>
 
 
 

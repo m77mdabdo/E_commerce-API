@@ -19,6 +19,7 @@ use App\Http\Controllers\AboutUs\AboutUsController;
 use App\Http\Controllers\Payment\PaymentController;
 use App\Http\Controllers\User\HomeController as UserHomeController;
 use App\Http\Controllers\Admin\ReviewController as AdminReviewController;
+use App\Http\Controllers\SMS\SmsController;
 use App\Http\Controllers\User\ProductController as UserProductController;
 use App\Http\Controllers\User\CategoryController as UserCategoryController;
 
@@ -216,9 +217,17 @@ Route::controller(AdminReviewController::class)->middleware(['auth', 'IsAdmin'])
 
 //payment
 
-Route::controller(PaymentController::class)->group(function () {
+Route::controller(PaymentController::class)->middleware('auth')->group(function () {
     Route::get('order/{order}/payment', 'create')->name('createPayment');
 
     Route::post('order/{order}/payment-intent', 'createStripePaymentIntent')->name('stripe.paymentIntent.create');
     Route::get('order/{order}/payment/confirm', 'confirm')->name('stripe.return');
+});
+
+
+//sms
+
+Route::controller(SmsController::class)->group(function () {
+    Route::get('send-sms/create', 'create')->name('createSms');
+    Route::post('send-sms', 'sendSms')->name('sendSms')->middleware('auth');
 });

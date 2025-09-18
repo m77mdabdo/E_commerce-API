@@ -27,6 +27,10 @@ return [
         'publishable_key' => env('STRIPE_PUBLISHABLE_KEY'),
         'secret_key' => env('STRIPE_SECRET_KEY'),
     ],
+    'vonage' => [
+        'key' => env('VONAGE_KEY'),
+        'secret' => env('VONAGE_SECRET'),
+    ],
 
     'resend' => [
         'key' => env('RESEND_KEY'),
