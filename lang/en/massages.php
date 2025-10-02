@@ -41,4 +41,10 @@ return [
     'terms_and_conditions' => 'Terms and Conditions',
     'privacy_policy' => 'Privacy Policy',
     'faq' => 'Frequently Asked Questions',
+    'support' => 'Support',
+    'newsletter' => 'Newsletter',
+    'subscribe' => 'Subscribe',
+    'unsubscribe' => 'Unsubscribe',
+    'email' => 'Email',
+    'password' => 'Password',
 ];

@@ -120,6 +120,70 @@
             </div>
         </li>
 
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-bs-toggle="collapse" href="#authMenu" aria-expanded="false"
+                aria-controls="authMenu">
+                <span class="menu-icon">
+                    <i class="mdi mdi-account-circle"></i>
+                </span>
+                <span class="menu-title">Authentication</span>
+                <i class="menu-arrow"></i>
+            </a>
+
+            <div class="collapse" id="authMenu">
+                <ul class="nav flex-column sub-menu">
+
+                    {{-- لو المستخدم مش عامل تسجيل دخول --}}
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">
+                                <i class="mdi mdi-login"></i> Login
+                            </a>
+                        </li>
+                        {{-- <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">
+                                <i class="mdi mdi-account-plus"></i> Register
+                            </a>
+                        </li> --}}
+
+
+                    {{-- لو المستخدم عامل تسجيل دخول --}}
+                    @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="mdi mdi-logout"></i> Logout ({{ auth()->user()->name }})
+                            </a>
+                        </li>
+                        {{-- <form id="logout-form" action="{{ route('login') }}" method="POST" style="display: none;">
+                            @csrf
+                         @method('delete')
+                        </form> --}}
+                    @endauth
+
+                </ul>
+            </div>
+        </li>
+
+
+
+        {{-- لو المستخدم عامل تسجيل دخول --}}
+        @auth
+            <li class="nav-item menu-items">
+                <a class="nav-link" href="#"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <span class="menu-icon">
+                        <i class="mdi mdi-logout"></i>
+                    </span>
+                    <span class="menu-title">Logout ({{ auth()->user()->name }})</span>
+                </a>
+            </li>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        @endauth
+
 
 
 

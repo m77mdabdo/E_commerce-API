@@ -42,6 +42,18 @@ return [
     'terms_and_conditions' => 'الشروط والأحكام',
     'privacy_policy' => 'سياسة الخصوصية',
     'faq' => 'الأسئلة الشائعة',
+    'support' => 'الدعم',
+    'newsletter' => 'النشرة الإخبارية',
+    'subscribe' => 'الاشتراك',
+    'unsubscribe' => 'إلغاء الاشتراك',
+    'email' => 'البريد الإلكتروني',
+    'password' => 'كلمة المرور',
+    'confirm_password' => 'تأكيد كلمة المرور',
+    'remember_me' => 'تذكرني',
+    'forgot_password' => 'نسيت كلمة المرور؟',
+    'reset_password' => 'إعادة تعيين كلمة المرور',
+    'send_reset_link' => 'إرسال رابط إعادة التعيين',
+    'new_password' => 'كلمة المرور الجديدة',
 
 
 

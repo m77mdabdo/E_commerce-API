@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
-                <h2>Sixteen <em>Clothing</em></h2>
+                <h2>Uniq <em>Style</em></h2>
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
